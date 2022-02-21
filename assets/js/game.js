@@ -5,17 +5,33 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+var enemyHealth = 50;
+var enemyAttack = 12;
+
+var enemy1 = "Roborto";
+var enemy2 = "Amy Android";
+var enemy3 = "Robo Trumble";
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
 
+function fight(enemyName) {// fight function statements}
+  window.alert("Welcome to Robot Gladiators!");
 
-var enemyName = "Roborto";
-var enemyHealth = 10;
-var enemyAttack = 12;
+
+// console.log(enemyNames);
+
+
+for(var i=0; i<enemyNames.lenght; i++) {
+  fight(enemyNames[i]);
+}
+//   console.log(i);
+//   console.log(enemyNames[i] + "is at" + i + "index");
+// }
+
+
 
 // create function
-function fight() {
-  window.alert("Welcome to Robot Gladiators!");
 
   var promptFight = window.prompt ("Would you like to fight or skip this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
@@ -81,7 +97,7 @@ if (enemyHealth <=0) {
 
 playerHealth = playerHealth - enemyAttack;
   // Log a resulting message to the console so we know that it worked.
-console.log( enemyName + "attacked" + playerName + "." + playerName + "now has" + playerHealth + "health remaining.");
+console.log( enemyNames + "attacked" + playerName + "." + playerName + "now has" + playerHealth + "health remaining.");
 // check players health
 if (playerHealth <=0) {
   window.alert(playerName + "has died");
@@ -89,4 +105,4 @@ if (playerHealth <=0) {
 else { window.alert(playerName + "still has" +playerHealth + "health left");
 }
 // execute function
-fight();
+// fight();
